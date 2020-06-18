@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"
+			xmlns="http://www.w3.org/1999/xhtml"
+			xmlns:th="http://www.thymeleaf.org"
+			>
+
+	<head>
+			<title>Nuovo Progetto</title>
+			<link rel=stylesheet th:href="@{/css/register.css}">
+			</head>
+<body>   <h1>Register new Project</h1>
+	<div><form id="newProjectForm" th:action=@{/projects/add} method=POST>
+	
+	<table>
+			<tr> 
+				<td><label for="nameInput"> Name</label></td>
+				<td><input id=nameInput type="text" placeholder="NAME" required 
+				th:field="${projectForm.name}"/></td>
+				<td th:if="${#fields.hasErrors('projectForm.name')}"
+					th:errors="${projectForm.name}"/>	
+		    </tr>
+	
+	        <tr> 
+				<td><label for="descriptionInput">Description</label></td>
+				<td><input id=descriptionInput type="text" placeholder="DESCRIPTION" required 
+				th:field="${projectForm.description}"/></td>
+				<td th:if="${#fields.hasErrors('projectForm.description')}"
+					th:errors="${projectForm.description}"/>	
+		    </tr>
+		    
+		    <tr>
+		    <td> <input type="submit" value="SIGN UP">
+		    </td>
+				</tr>
+	</table>
+	</form>
+	</div>
+</body>			
+			
+			
+</html>

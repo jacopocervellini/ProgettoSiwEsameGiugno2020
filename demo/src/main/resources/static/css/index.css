@@ -1,0 +1,15 @@
+body {
+	background-color: rgba(42, 42, 46, 1);
+}
+
+h1{
+	font-size: 40pt;
+	color: #1C1C1C;
+	text-align: center;
+	font: bolder;
+}
+
+p{
+	font-size: 24pt;
+	color: #1C1C1C;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Nuova Tag</title>
+<link rel=stylesheet th:href="@{/css/register.css}">
+</head>
+<body>
+	<h1>Add new Tag</h1>
+	<div>
+		<form id="newTagForm"
+			th:action="@{'/task' + '/' + ${task.id} + '/addTag' }"
+			method=POST>
+
+			<table class="tabella-centrata">
+				<tr>
+					<td><label for="nameInput"> Name</label></td>
+					<td><input id=nameInput type="text" placeholder="NAME"
+						required th:field="${tagForm.name}" /></td>
+					<td th:if="${#fields.hasErrors('tagForm.name')}"
+						th:errors="${tagForm.name}" />
+				</tr>
+
+				<tr>
+					<td><label for="descriptionInput">Description</label></td>
+					<td><input id=descriptionInput type="text"
+						placeholder="DESCRIPTION" required
+						th:field="${tagForm.description}" /></td>
+					<td th:if="${#fields.hasErrors('tagForm.description')}"
+						th:errors="${tagForm.description}" />
+				</tr>
+				<tr>
+					<td><label for="colorInput">Color</label></td>
+					<td><input id=colorInput type="text"
+						placeholder="COLOR" required
+						th:field="${tagForm.color}" /></td>
+					<td th:if="${#fields.hasErrors('tagForm.color')}"
+						th:errors="${tagForm.color}" />
+				</tr>
+				<tr>
+					<td><input type="submit" value="ADD"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+
+
+</html>

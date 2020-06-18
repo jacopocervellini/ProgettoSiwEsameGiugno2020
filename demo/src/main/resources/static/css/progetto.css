@@ -1,0 +1,25 @@
+body {
+	background-color: rgba(42, 42, 46, 1);
+}
+
+h1 {
+	font-size: 32pt;
+	color: #b8bcc5;
+	font: bolder;
+}
+
+h3,h4 {
+	font-size: 14pt;
+	color: #b8bcc5;
+	font: bolder;
+}
+
+input {
+	background: #1C1C1C; /* Colore di sfondo */
+	border: 1px solid #323232; /* Bordo */
+	color: #fff; /* Colore del testo */
+	height: 30px; /* Altezza */
+	line-height: 30px; /* Altezza di riga */
+	width: 300px; /* Larghezza */
+	padding: 0 10px; /* Padding */
+}

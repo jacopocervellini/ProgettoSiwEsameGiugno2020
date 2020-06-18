@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"
+			xmlns="http://www.w3.org/1999/xhtml"
+			xmlns:th="http://www.thymeleaf.org"
+			>
+
+	<head>
+			<title>Modifica Progetto</title>
+			<link rel=stylesheet th:href="@{/css/register.css}">
+			</head>
+<body>   <h1>Edit project</h1>
+	<div><form id="editProjectForm" th:action="@{'/editProgetto' + '/' + ${project.id}}" method=POST>
+	
+	<table class="tabella-centrata">
+			<tr> 
+				<td><label for="nameInput">New Name</label></td>
+				<td><input id=nameInput type="text" placeholder="NAME" required 
+				th:field="${projectForm.name}"/></td>
+				<td th:if="${#fields.hasErrors('projectForm.name')}"
+					th:errors="${projectForm.name}"/>	
+		    </tr>
+	
+	        <tr> 
+				<td><label for="descriptionInput">New Description</label></td>
+				<td><input id=descriptionInput type="text" placeholder="DESCRIPTION" required 
+				th:field="${projectForm.description}"/></td>
+				<td th:if="${#fields.hasErrors('projectForm.description')}"
+					th:errors="${projectForm.description}"/>	
+		    </tr>
+		    
+		    <tr>
+		    <td> <input type="submit" value="EDIT">
+		    </td>
+				</tr>
+	</table>
+	</form>
+	</div>
+</body>			
+			
+			
+</html>

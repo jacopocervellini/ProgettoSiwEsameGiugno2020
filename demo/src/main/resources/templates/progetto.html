@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Progetto</title>
+    <link rel=stylesheet th:href="@{/css/progetto.css}">
+</head>
+
+<body>
+<h1 th:text= "'Project name: '+ ${project.name}"></h1>
+<h3>Description :</h3>
+<h4 th:text="${project.description}"></h4>
+
+
+<div th:if="${users.size() > 0}">
+<h3> Condivisi con: </h3>
+<ul>
+	<li th:each = "user : ${users}">
+	<div th:text = "${user.firstName} + ' ' + ${user.lastName}" ></div>
+</li>
+</ul>
+</div>
+<div>
+<h3> Tasks del progetto: </h3>
+<ul> 
+	<li th:each = "task : ${project.ownertask}">
+	<a  th:href="@{'/task' + '/' + ${task.id}}"
+			th:text="${task.name}">Nome</a>
+	</li>
+</ul>
+</div>
+<div>
+<h3> Tags del progetto: </h3>
+<ul> 
+	<li th:each = "tag : ${project.projectTags}">
+	<a  th:href="@{'/tag' + '/' + ${tag.id}}"
+			th:text="${tag.name}">Nome</a>
+	</li>
+</ul>
+</div>
+<div>
+		<form th:action="@{'/editProgetto' + '/' + ${project.id}}" method = "GET">
+		<input type="submit" value="Edit project">
+		</form>
+</div>
+
+<div>
+		<form th:action="@{'/elimina/progetto' + '/' + ${project.id}}" method = "GET">
+		<input type="submit" value="Delete project">
+		</form>
+</div>
+<div>
+		<form th:action="@{'/projects'}" method="GET">
+		<input type="submit" value="Back to projects">
+		</form>
+</div>
+<div>
+		<form th:action="@{${project.id} + '/addTask'}" method="GET">
+		<input type="submit" value="Add Task">
+		</form>
+</div>
+<div>
+		<form th:action="@{'/progetto/'+${project.id}+'/addTag'}" method="GET">
+		<input type="submit" value="Add Tag ">
+		</form>
+</div>
+
+<div>
+		<form th:action="@{'/progetto/share/'+${project.id}}" method="GET">
+		<input type="submit" value="Share this project">
+		</form>
+</div>
+
+<div>
+		<form th:action="@{'/home'}" method="GET">
+		<input type="submit" value="Back to home">
+		</form>
+</div>
+</body>
+</html>

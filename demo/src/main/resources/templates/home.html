@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"
+			xmlns="http://www.w3.org/1999/xhtml"
+			xmlns:th="http://www.thymeleaf.org"
+			>
+			<head>
+			<title>Home</title>
+			<link rel=stylesheet th:href="@{/css/home.css}">
+			</head>
+			<body>
+				<h1 class="box" th:text="'Welcome' + ' '+  ${user.firstName} +'!'"></h1>
+				<h4> <a th:href="@{/projects}">My Projects</a></h4>
+				<h4> <a th:href="@{/visibleProjects}">My visible projects</a></h4>
+				<h4> <a th:href="@{/projects/add}">Create new project </a></h4>
+				<h4> <a th:href="@{/user/profile}">Profile </a></h4>
+				<h4> <a href="/logout">Logout </a></h4>			
+			</body>
+</html>

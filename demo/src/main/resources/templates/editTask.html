@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"
+			xmlns="http://www.w3.org/1999/xhtml"
+			xmlns:th="http://www.thymeleaf.org"
+			>
+
+	<head>
+			<title>Modifica Task</title>
+			<link rel=stylesheet th:href="@{/css/register.css}">
+			</head>
+<body>   <h1>Edit task</h1>
+	<div><form id="editTaskForm" th:action="@{'/editTask' + '/' + ${task.id}}" method=POST>
+	
+	<table>
+			<tr> 
+				<td><label for="nameInput">New Name</label></td>
+				<td><input id=nameInput type="text" placeholder="NAME" required 
+				th:field="${taskForm.name}"/></td>
+				<td th:if="${#fields.hasErrors('taskForm.name')}"
+					th:errors="${taskForm.name}"/>
+				
+		    </tr>
+	
+	        <tr> 
+				<td><label for="descriptionInput">New Description</label></td>
+				<td><input id=descriptionInput type="text" placeholder="DESCRIPTION" required 
+				th:field="${taskForm.description}"/></td>
+				<td th:if="${#fields.hasErrors('taskForm.description')}"
+					th:errors="${taskForm.description}"/>
+				
+		    </tr>
+		    
+		    <tr>
+		    <td> <input type="submit" value="EDIT">
+		    </td>
+				</tr>
+	</table>
+	</form>
+	</div>
+</body>			
+			
+			
+</html>

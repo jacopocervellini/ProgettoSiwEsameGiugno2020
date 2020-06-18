@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Profilo</title>
+    <link rel=stylesheet th:href="@{/css/profile.css}">
+</head>
+
+<body>
+<h1 th:text= "'User: ' + ${credentials.username}"></h1>
+<h4 th:text="'Name: ' +${userLoggato.firstName}"></h4>
+<h4 th:text="'Surname: ' +${userLoggato.lastName}"></h4>
+<h4 th:text="'Role: ' +${credentials.role}"></h4>
+<h4 th:text="'Registration date: ' +${userLoggato.creationTimeStamp}"></h4>
+<h4 th:text="'Last Update: ' +${userLoggato.lastUpdateTimeStamp}"></h4>
+<div>
+		<form th:action="@{'/user/profile/edit'}" method = "GET">
+		<input type="submit" value="Update profile">
+		</form>
+</div>
+
+</body>
+</html>

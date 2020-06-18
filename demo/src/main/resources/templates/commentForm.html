@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"
+			xmlns="http://www.w3.org/1999/xhtml"
+			xmlns:th="http://www.thymeleaf.org"
+			>
+
+	<head>
+			<title>Inserisci Task</title>
+			<link rel=stylesheet th:href="@{/css/register.css}">
+			</head>
+<body>   <h1>Add new Task</h1>
+	<div><form id="newTaskForm" th:action="@{'/task' + '/' + ${task.id} + '/addComment' }" method=POST>
+	
+	<table class="tabella-centrata">
+			<tr> 
+				<td><label for="nameInput"> Text</label></td>
+				<td><input id=nameInput type="text" placeholder="TEXT" required 
+				th:field="${commentForm.text}"/></td>
+				<td th:if="${#fields.hasErrors('commentForm.text')}"
+						th:errors="${commentForm.text}" />
+				 </tr>
+		    <tr>
+		    <td> <input type="submit" value="ADD">
+		    </td>
+				</tr>
+	</table>
+	</form>
+	</div>
+</body>			
+			
+			
+</html>

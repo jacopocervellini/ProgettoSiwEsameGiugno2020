@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Comment</title>
+    <link rel=stylesheet th:href="@{/css/comment.css}">
+</head>
+
+<body>
+<h1 th:text= "'COMMENT: '"></h1>
+<h4 th:text="'Text: ' +${comment.text}"></h4>
+<h4 th:text="'Creation date: ' +${comment.creationTime}"></h4>
+
+
+<div>
+		<form th:action="@{'/projects'}" method="GET">
+		<input type="submit" value="Back to projects">
+		</form>
+</div>
+
+</body>
+</html>

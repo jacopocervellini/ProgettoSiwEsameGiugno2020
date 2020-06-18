@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>TaskManager</title>
+<link rel=stylesheet th:href="@{/css/register.css}">
+</head>
+<body>
+	<h1>Share with </h1>
+	<div>
+		<form id="shareForm" th:action="@{'/progetto/share/'+${project.id}}"
+			method=POST>
+			<table>
+				<tr>
+					<td><label for="usernameInput">Username </label></td>
+					<td><input id=usernameInput type="text" placeholder="USERNAME"
+						required th:field="${credentials.username}" /></td>
+					<td><input type="submit" value="Share"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

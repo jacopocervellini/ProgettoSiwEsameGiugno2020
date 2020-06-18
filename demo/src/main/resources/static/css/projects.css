@@ -1,0 +1,33 @@
+input { /* Stili comuni agli elementi del form */
+	color: #b8bcc5; /* Colore del testo */
+	float: left; /* Float a sinistra */
+	font-family: Verdana, sans-serif; /* Tipo di carattere per il testo */
+	margin: 300px 500px; /* Margini */
+}
+input { /* Stili per il campo di testo e per la textarea */
+	background: #1C1C1C; /* Colore di sfondo */
+	border: 1px solid #323232; /* Bordo */
+	color: #fff; /* Colore del testo */
+	height: 30px; /* Altezza */
+	line-height: 30px; /* Altezza di riga */
+	width: 300px; /* Larghezza */
+	padding: 0 10px; /* Padding */
+}
+
+body {
+	background-color: rgba(42, 42, 46, 1);
+}
+
+h1 {
+	font-size: 40pt;
+	color: #1C1C1C;
+	text-align: center;
+	font: bolder;
+}
+
+.tabella-centrata {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18pt;
+  margin-top: 80pt;
+}

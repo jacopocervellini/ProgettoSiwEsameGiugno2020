@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tag</title>
+    <link rel=stylesheet th:href="@{/css/profile.css}">
+</head>
+
+<body>
+<h1 th:text= "'TAG: ' + ${tag.name}"></h1>
+<h4 th:text="'Description: ' +${tag.description}"></h4>
+<h4 th:text="'Color: ' +${tag.color}"></h4>
+
+<div>
+		<form th:action="@{'/tag/delete/' + ${tag.id}}" method="GET">
+		<input type="submit" value="Delete tag">
+		</form>
+</div>
+
+<div>
+		<form th:action="@{'/projects'}" method="GET">
+		<input type="submit" value="Back to projects">
+		</form>
+</div>
+
+</body>
+</html>

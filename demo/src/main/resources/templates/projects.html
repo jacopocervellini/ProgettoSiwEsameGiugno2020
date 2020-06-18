@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>My Projects</title>
+    <link rel=stylesheet th:href="@{/css/projects.css}">
+  </head>
+  <h1>My Projects</h1>
+  <table class="tabella-centrata">
+  <thead> <tr>
+  		  <th>Name</th>
+  	      <th>Description</th>
+  	</tr>
+  </thead>
+  <tbody>
+    	<tr th:each="project : ${projects}">
+			<td><a  th:href="@{'/progetto' + '/' + ${project.id}}"
+			th:text="${project.name}">Nome</a></td>
+    	<td th:text="${project.description}"></td>
+    	
+    </tbody>
+    </table>
+    		<form th:action="@{'/home'}" method="GET">
+		<input type="submit" value="Torna alla tua pagina principale">
+		</form>
+</html>

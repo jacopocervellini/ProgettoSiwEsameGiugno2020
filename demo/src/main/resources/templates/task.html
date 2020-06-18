@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Task</title>
+    <link rel=stylesheet th:href="@{/css/profile.css}">
+</head>
+
+<body>
+<h1 th:text= "'TASK: ' + ${task.name}"></h1>
+<h4 th:text="'Description: ' +${task.description}"></h4>
+<h4 th:text="'Registration date: ' +${task.creationTimeStamp}"></h4>
+<h4 th:text="'Last Update: ' +${task.lastUpgradeTimeStamp}"></h4>
+
+<h3> Tag: </h3>
+<ul> 
+	<li th:each = "tag : ${task.taskTags}">
+	<a  th:href="@{'/tag' + '/' + ${tag.id}}"
+			th:text="${tag.name}">Nome</a>
+	</li>
+</ul>
+<h3> Comment: </h3>
+<ul>
+	<li th:each = "comment : ${task.commentTask}">
+	<a  th:href="@{'/comment' + '/' + ${comment.id}}"
+			th:text="${comment.text}">Nome</a>
+	</li>
+</ul>
+
+<div>
+		<form th:action="@{'/task' + '/' + ${task.id}+'/addTag'}" method = "GET">
+		<input type="submit" value="Add Tag">
+		</form>
+</div>
+<div>
+		<form th:action="@{'/task' + '/' + ${task.id}+'/addComment'}" method = "GET">
+		<input type="submit" value="Add Comment">
+		</form>
+</div>
+<div>
+		<form th:action="@{'/elimina/task' + '/' + ${task.id}}" method = "GET">
+		<input type="submit" value="Delete task">
+		</form>
+</div>
+<div>
+		<form th:action="@{'/editTask' + '/' + ${task.id}}" method = "GET">
+		<input type="submit" value="Edit task">
+		</form>
+</div>
+
+</body>
+</html>
