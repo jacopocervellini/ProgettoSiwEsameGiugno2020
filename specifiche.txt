@@ -1,0 +1,56 @@
+Per quanto riguarda i casi d'uso proposti nel progetto, sono stati implementati quasi tutti , comprese le varie estensioni.
+Per precisione sono stati implementati i seguenti casi d'uso:
+1 Sing in 
+2 Signup
+3 Autenticazione
+4 Visualizzare il mio profilo
+5 Aggiornare il mio profilo
+6 Creare un nuovo progetto
+7 Visualizzare i miei progetti
+8 Visualizzare i progetti condivisi con me
+9 Aggiornare i dati di un mio progetto
+10 Cancellare un mio progetto
+11 Condividere un mio progetto con un altro utente
+12 Aggiungere un tag ad un mio progetto (estensione)
+13 Aggiungere un nuovo Task a un mio progetto
+14 Aggiornare un Task di un mio progetto
+15 Cancellare un Task da un mio progetto
+16 Aggiungere un Tag ad un task di un mio progetto (estensione)
+17 Aggiungere un Commento ad un Task di un progetto su cui ho visibilità (estensione)
+18 Logout
+
+L'applicazione web si apre con una pagina di benvenuto che permette di fare o il Sing in o il Sing up.
+1  Sing in:
+   L'utente inserisce l'username e la password che ha precedentemente registrato mediante il Sing up.
+2  Sing up:
+   L'utente inserisce i propri dati personali(nome e cognome), password e username, e viene registrato.
+4  Visualizzare il profilo:
+   Arrivato nella pagina home, dopo il login, l'utente può avere accesso alla pagina del profilo che contiene i dati personali, i dati delle credenziali, la data di registrazione e la l'ultima data di aggiornamento.
+5  Aggiornare il profilo:
+   L'utente può , attraverso una form , cambiare i propri dati personali e i dati legati alle credenziali d'accesso.
+6  Creare un nuovo progetto:
+   L'utente, cliccando su newProject, accede ad una form, dove inserisci il nome e la descrizione del progetto, quest'ultimo verrà aggiunto alla pagina myProjects.
+7  Visualizzare i miei progetti:
+   L'utente cliccando su My Projects ha accesso alla pagina che mostra i vari progetti con le relative descrizioni.
+8  Visualizzare i progetti condivisi con me:
+   L'utente può accedere alla lista dei progetti che altri utenti hanno condiviso con lui, e quindi non sono progetti di cui è proprietario.
+9  Aggiornare i dati di un progetto:
+   L'utente mediante una form può modificare il nome e la descrizione di un progetto.
+10 Cancellare un mio progetto:
+   L'utente ha accesso alla pagina che mostra il progetto e cliccando sul bottone delete project può cancellare il progetto.
+11 Condividere un mio progetto con un altro utente:
+   L'utente può cliccare sul link shareProject che permetterà di condividere il progetto con un altro user, che viene individuato attraverso l'inserimento in una form del relativo username.
+12 Aggiungere un tag ad un mio progetto:
+   L'utente attraverso un pulsante add Tag presente sulla pagina del progetto, può inserire un tag, compilando una form che richiede l'inserimento di nome descrizione e colore.
+13 Aggiungere un nuovo task ad un mio progetto:
+   L'utente tramite la pagina di presentazione del progetto può cliccare sul bottone add task che permetterà ,attraverso una form in cui si dovrà inserire nome e descrizione della task, di inserire una nuova task.
+14 Aggiornare i dati di una task:
+   L'utente mediante una form può modificare il nome e la descrizione di una task attraverso una form.
+15 Cancellare un Task da un mio progetto:
+   L'utente può cancellare la task attraverso il pulsante delete task presente nella pagina della presentazione delle task.
+16 Aggiungere un Tag ad un task di un mio progetto (estensione):
+   L'utente attraverso un pulsante situato sulla pagina di un task, può attraverso una form inserire un tag, con nome,descrizione e colore. 
+17 Aggiungere un Commento ad un Task di un progetto su cui ho visibilità (estensione)
+   L'utente attraverso un pulsate che permette di arrivare ad una form, che richiede l'inserimento del testo del commento che si vuole inserire, può inserire un commento ma solo se il progetto è un progetto di cui non è proprietario.
+18 Logout
+   L'utente può cliccare sul link Logout, situato nella home, che dopo la conferma permette di sloggarsi. 
